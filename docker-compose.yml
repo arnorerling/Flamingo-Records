@@ -15,8 +15,14 @@ services:
     customer-db:
         image: postgres
         container_name: customer-db
+        environment:
+            POSTGRES_PASSWORD: Abc.12345
+            POSTGRES_DB: customer_db
         networks:
             - "flamingo-network"
+        volumes:
+            - /${PWD}/customer-db/db/scripts/init.sql
+
     order-service:
         build: ./order-service
         container_name: order-service
@@ -38,8 +44,11 @@ services:
         networks:
             - "flamingo-network"
     message-broker:
-        image: rabbitmq
+        image: "rabbitmq:3-management"
         container_name: message-broker
+        hostname: message-broker
+        environment:
+            - RABBITMQ_ERLANG_COOKIE='leynikaka'
         networks:
             - "flamingo-network"
 networks:

@@ -24,3 +24,5 @@ sudo docker build -t magnuss17/email-service .
 
 sudo docker run -d --name email-service --network flamingo-network magnuss17/email-service
 
+sudo docker run -d --hostname message-broker --name message-broker -e RABBITMQ_ERLANG_COOKIE='secret cookie here' rabbitmq:3-management
+
