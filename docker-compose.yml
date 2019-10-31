@@ -1,0 +1,47 @@
+version: '3'
+services:
+    api-gateway:
+        build: ./api-gateway
+        container_name: api-gateway
+        ports:
+            - "5000:7000"
+        networks:
+            - "flamingo-network"
+    customer-service:
+        build: ./customer-service
+        container_name: customer-service
+        networks:
+            - "flamingo-network"
+    customer-db:
+        image: postgres
+        container_name: customer-db
+        networks:
+            - "flamingo-network"
+    order-service:
+        build: ./order-service
+        container_name: order-service
+        networks:
+            - "flamingo-network"
+    order-db:
+        image: mongo
+        container_name: order-db
+        networks:
+            - "flamingo-network"
+    log-service:
+        container_name: log-service
+        build: ./log-service
+        networks:
+            - "flamingo-network"
+    email-service:
+        container_name: email-service
+        build: ./email-service
+        networks:
+            - "flamingo-network"
+    message-broker:
+        image: rabbitmq
+        container_name: message-broker
+        networks:
+            - "flamingo-network"
+networks:
+    flamingo-network:
+        driver: bridge

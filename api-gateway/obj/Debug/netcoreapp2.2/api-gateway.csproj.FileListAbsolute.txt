@@ -1,0 +1,14 @@
+/home/arnorerling/Documents/VEFT/Flamingo-Records/api-gateway/bin/Debug/netcoreapp2.2/api-gateway.deps.json
+/home/arnorerling/Documents/VEFT/Flamingo-Records/api-gateway/bin/Debug/netcoreapp2.2/api-gateway.runtimeconfig.json
+/home/arnorerling/Documents/VEFT/Flamingo-Records/api-gateway/bin/Debug/netcoreapp2.2/api-gateway.runtimeconfig.dev.json
+/home/arnorerling/Documents/VEFT/Flamingo-Records/api-gateway/bin/Debug/netcoreapp2.2/api-gateway.dll
+/home/arnorerling/Documents/VEFT/Flamingo-Records/api-gateway/bin/Debug/netcoreapp2.2/api-gateway.pdb
+/home/arnorerling/Documents/VEFT/Flamingo-Records/api-gateway/obj/Debug/netcoreapp2.2/api-gateway.csprojAssemblyReference.cache
+/home/arnorerling/Documents/VEFT/Flamingo-Records/api-gateway/obj/Debug/netcoreapp2.2/api-gateway.csproj.CoreCompileInputs.cache
+/home/arnorerling/Documents/VEFT/Flamingo-Records/api-gateway/obj/Debug/netcoreapp2.2/api-gateway.RazorAssemblyInfo.cache
+/home/arnorerling/Documents/VEFT/Flamingo-Records/api-gateway/obj/Debug/netcoreapp2.2/api-gateway.RazorAssemblyInfo.cs
+/home/arnorerling/Documents/VEFT/Flamingo-Records/api-gateway/obj/Debug/netcoreapp2.2/api-gateway.AssemblyInfoInputs.cache
+/home/arnorerling/Documents/VEFT/Flamingo-Records/api-gateway/obj/Debug/netcoreapp2.2/api-gateway.AssemblyInfo.cs
+/home/arnorerling/Documents/VEFT/Flamingo-Records/api-gateway/obj/Debug/netcoreapp2.2/api-gateway.RazorTargetAssemblyInfo.cache
+/home/arnorerling/Documents/VEFT/Flamingo-Records/api-gateway/obj/Debug/netcoreapp2.2/api-gateway.dll
+/home/arnorerling/Documents/VEFT/Flamingo-Records/api-gateway/obj/Debug/netcoreapp2.2/api-gateway.pdb
