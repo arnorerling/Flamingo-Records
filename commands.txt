@@ -1,1 +1,26 @@
 docker network create flamingo-network
+
+sudo docker build -t magnuss17/api-gateway .
+
+sudo docker run -d --name api-gateway --network flamingo-network -p 7000:5000 magnuss17/api-gateway
+
+sudo docker build -t magnuss17/customer-service .
+
+sudo docker run -d --name customer-service --network flamingo-network magnuss17/customer-service
+
+sudo docker run -d --name customer-db -it -e 'POSTGRES_PASSWORD=Abc.12345' -e 'POSTGRES_DB=customer_db' --network flamingo-network -v '/${PWD}/customer-db/db/scripts':/docker-entrypoint-initdb.d postgres
+
+sudo docker build -t magnuss17/order-service .
+
+sudo docker run -d --name order-service --network flamingo-network magnuss17/order-service
+
+sudo docker run --name order-db --network flamingo-network -d mongo
+
+sudo docker build -t magnuss17/log-service .
+
+sudo docker run -d --name log-service --network flamingo-network magnuss17/log-service
+
+sudo docker build -t magnuss17/email-service .
+
+sudo docker run -d --name email-service --network flamingo-network magnuss17/email-service
+

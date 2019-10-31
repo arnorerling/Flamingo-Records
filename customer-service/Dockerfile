@@ -5,8 +5,9 @@ LABEL maintainer="Arnor Erling Einarsson"
 COPY . /app
 WORKDIR /app
 RUN dotnet restore
+RUN dotnet build
 
 ENV ASPNETCORE_URLS http://*:80
 ENV POSTGRES_DB customer_db
 ENV POSTGRES_PASSWORD Abc.12345
-ENTRYPOINT [ "dotnet", "run"]
+ENTRYPOINT [ "dotnet", "run", "--project", "./customer-service"]
