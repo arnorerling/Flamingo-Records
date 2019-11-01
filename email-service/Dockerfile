@@ -1,4 +1,5 @@
 FROM python:3
+LABEL maintainer="Arnor Erling Einarsson & Emil Newel & Magnús Freyr Sveinsson"
 
 ADD . /app
 
@@ -8,4 +9,4 @@ ENV PYTHON_ENV production
 
 RUN pip install -r /app/requirements.txt
 
-CMD [ "python3", "./app.py" ]
+CMD python3 ./app.py
