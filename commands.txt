@@ -12,7 +12,7 @@ sudo docker run -d --name customer-db -it -e 'POSTGRES_PASSWORD=Abc.12345' -e 'P
 
 sudo docker build -t magnuss17/order-service .
 
-sudo docker run -d --name order-service --network flamingo-network magnuss17/order-service
+sudo docker run -d --name order-service -e 'PORT=80' --network flamingo-network magnuss17/order-service
 
 sudo docker run --name order-db --network flamingo-network -d mongo
 
@@ -24,5 +24,10 @@ sudo docker build -t magnuss17/email-service .
 
 sudo docker run -d --name email-service --network flamingo-network magnuss17/email-service
 
-sudo docker run -d --hostname message-broker --name message-broker -e RABBITMQ_ERLANG_COOKIE='secret cookie here' rabbitmq:3-management
+sudo docker run -d --hostname message-broker --name message-broker -e 'RABBITMQ_DEFAULT_USER=user' -e 'RABBITMQ_DEFAULT_PASS=pass' -e 'RABBITMQ_VHOST=/' rabbitmq:3-management
 
+
+
+
+
+sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' message-broker
